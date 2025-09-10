@@ -84,4 +84,17 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             <runs/>
         </js-module>
     </platform>
+    
+   	<platform name="swt">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="NetworkStatus">
+                <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/NetworkManager.java" target-dir="src/org/apache/cordova/networkinformation" />
+        <source-file src="src/android/NetworkMonitor.java" target-dir="src/org/apache/cordova/networkinformation" />
+        <source-file src="src/android/NetworkTypeDetector.java" target-dir="src/org/apache/cordova/networkinformation" />
+
+    </platform>
 </plugin>

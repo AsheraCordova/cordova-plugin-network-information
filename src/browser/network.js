@@ -26,11 +26,16 @@ var type = navigator.onLine ? Connection.UNKNOWN : Connection.NONE;
 
 // Subscribe to 'native' online/offline events
 function onStatusChange (evt) {
-    type = navigator.onLine ? Connection.UNKNOWN : Connection.NONE;
+	var currentType = navigator.onLine ? Connection.UNKNOWN : Connection.NONE;
+
+  if (currentType !== type) {
+    type = currentType;
     // force async
-    setTimeout(function () {
+	setTimeout(function () {
         cordova.fireDocumentEvent(evt.type);
     }, 0);
+    
+  } 
 }
 
 window.addEventListener('online', onStatusChange);

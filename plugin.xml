@@ -92,9 +92,9 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             </feature>
         </config-file>
 
-        <source-file src="src/android/NetworkManager.java" target-dir="src/org/apache/cordova/networkinformation" />
-        <source-file src="src/android/NetworkMonitor.java" target-dir="src/org/apache/cordova/networkinformation" />
-        <source-file src="src/android/NetworkTypeDetector.java" target-dir="src/org/apache/cordova/networkinformation" />
+        <source-file src="src/swt/NetworkManager.java" target-dir="src/org/apache/cordova/networkinformation" />
+        <source-file src="src/swt/NetworkMonitor.java" target-dir="src/org/apache/cordova/networkinformation" />
+        <source-file src="src/swt/NetworkTypeDetector.java" target-dir="src/org/apache/cordova/networkinformation" />
 
     </platform>
 </plugin>
